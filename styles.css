@@ -1,0 +1,9 @@
+#title1{
+  display: block;
+  flex-wrap: wrap;
+  color: red;
+}
+p{
+  color: black;
+  width: 10px;
+}

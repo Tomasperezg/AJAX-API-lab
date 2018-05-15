@@ -12,3 +12,8 @@ body{
   margin-right: 20px;
   background-color: 	#87CEFA;
 }
+header{
+  text-align: center;
+  font-size: 30px;
+  background-color: green;
+}

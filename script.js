@@ -1,7 +1,7 @@
-$.get("https://www.reddit.com/r/aww/.json").then(function (json) {
+$.get(`https://www.reddit.com/r/aww/.json`).then(function (json) {
 
     let text = json.data.children;
-	   let target = $("#title1");
+	  let target = $("#title1");
 
       for(i=0;i<10;i++){
         var titles  = text[i].data.title;
@@ -10,4 +10,8 @@ $.get("https://www.reddit.com/r/aww/.json").then(function (json) {
         $(target.append(titles)).css({"color": "blue", "display":"block", "margin-bottom": "20px"});
         $(target.append(urls)).css({"color": "black"});
       }
+    }).fail(() => {
+      console.log("something went wrong!!");
+    }).always(() => {
+      console.log("i will always run!");
     });
